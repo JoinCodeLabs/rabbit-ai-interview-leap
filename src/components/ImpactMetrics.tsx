@@ -29,11 +29,11 @@ const ImpactMetrics = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-secondary/10 to-primary/10">
+    <section className="py-32 bg-muted/20">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            Measurable <span className="text-gradient-accent">Impact</span>
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-foreground">
+            Measurable <span className="text-foreground">Impact</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Join hundreds of companies already transforming their hiring process 
@@ -47,11 +47,11 @@ const ImpactMetrics = () => {
               key={index}
               className="text-center group"
             >
-              <div className="w-20 h-20 bg-gradient-to-r from-accent to-accent-glow rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-cta">
-                <metric.icon className="w-10 h-10 text-accent-foreground" />
+              <div className="w-20 h-20 bg-foreground rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-md">
+                <metric.icon className="w-10 h-10 text-background" />
               </div>
               
-              <div className="text-4xl lg:text-5xl font-bold mb-2 text-gradient-primary">{metric.value}</div>
+              <div className="text-4xl lg:text-5xl font-bold mb-2 text-foreground">{metric.value}</div>
               <h3 className="text-lg font-semibold mb-3 text-foreground">{metric.label}</h3>
               <p className="text-muted-foreground leading-relaxed text-sm">{metric.description}</p>
             </div>

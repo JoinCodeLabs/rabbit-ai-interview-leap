@@ -28,8 +28,8 @@ const AnalyticsReporting = () => {
     <section className="py-32 bg-background">
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="text-center mb-20">
-          <h2 className="text-5xl lg:text-6xl font-bold mb-8 tracking-tight">
-            <span className="text-gradient-primary">Analytics</span> & Reporting
+          <h2 className="text-5xl lg:text-6xl font-bold mb-8 tracking-tight text-foreground">
+            <span className="text-foreground">Analytics</span> & Reporting
           </h2>
           <p className="text-2xl text-muted-foreground leading-relaxed max-w-4xl mx-auto font-light">
             Make informed hiring decisions with comprehensive analytics, 
@@ -40,8 +40,8 @@ const AnalyticsReporting = () => {
         <div className="grid md:grid-cols-2 gap-12">
           {features.map((feature, index) => (
             <div key={index} className="flex gap-6 group">
-              <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-r from-primary to-primary-glow rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <feature.icon className="w-8 h-8 text-primary-foreground" />
+              <div className="flex-shrink-0 w-16 h-16 bg-foreground rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <feature.icon className="w-8 h-8 text-background" />
               </div>
               <div>
                 <h3 className="text-2xl font-semibold mb-4 text-foreground">{feature.title}</h3>

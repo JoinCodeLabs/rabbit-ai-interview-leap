@@ -29,8 +29,8 @@ const Testimonials = () => {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            What Our <span className="text-gradient-secondary">Clients Say</span>
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-foreground">
+            What Our <span className="text-foreground">Clients Say</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Real feedback from hiring teams who have revolutionized their recruitment 
@@ -45,14 +45,14 @@ const Testimonials = () => {
               className="testimonial-card group relative"
             >
               {/* Quote Icon */}
-              <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-r from-primary to-primary-glow rounded-full flex items-center justify-center shadow-glow">
-                <Quote className="w-6 h-6 text-primary-foreground" />
+              <div className="absolute -top-4 -left-4 w-12 h-12 bg-foreground rounded-full flex items-center justify-center shadow-md">
+                <Quote className="w-6 h-6 text-background" />
               </div>
 
               {/* Rating */}
               <div className="flex gap-1 mb-4 pt-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-accent text-accent" />
+                  <Star key={i} className="w-5 h-5 fill-foreground text-foreground" />
                 ))}
               </div>
 
@@ -65,7 +65,7 @@ const Testimonials = () => {
               <div className="border-t border-border pt-4">
                 <div className="font-semibold text-foreground">{testimonial.author}</div>
                 <div className="text-sm text-muted-foreground">{testimonial.title}</div>
-                <div className="text-sm font-medium text-primary">{testimonial.company}</div>
+                <div className="text-sm font-medium text-foreground">{testimonial.company}</div>
               </div>
             </div>
           ))}
@@ -73,7 +73,7 @@ const Testimonials = () => {
 
         {/* Call to Action */}
         <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-8 max-w-2xl mx-auto">
+          <div className="bg-muted/30 rounded-2xl p-8 max-w-2xl mx-auto">
             <h3 className="text-2xl font-semibold mb-4 text-foreground">
               Join the Future of Hiring Today
             </h3>

@@ -45,16 +45,16 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-muted/50 to-background border-t border-border">
+    <footer className="bg-muted/30 border-t border-border">
       <div className="container mx-auto px-6 py-16">
         <div className="grid lg:grid-cols-5 gap-12">
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-r from-primary to-primary-glow rounded-xl flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">R</span>
+              <div className="w-10 h-10 bg-foreground rounded-xl flex items-center justify-center">
+                <span className="text-background font-bold text-lg">R</span>
               </div>
-              <span className="text-2xl font-bold text-gradient-primary">Rabbit AI</span>
+              <span className="text-2xl font-bold text-foreground">Rabbit AI</span>
             </div>
             <p className="text-muted-foreground leading-relaxed mb-6">
               The future of hiring is here. AI-powered interviews that scale 
@@ -64,15 +64,15 @@ const Footer = () => {
             {/* Contact Info */}
             <div className="space-y-3 text-sm">
               <div className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-primary" />
+                <Mail className="w-4 h-4 text-foreground" />
                 <span className="text-muted-foreground">hello@rabbitai.com</span>
               </div>
               <div className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-primary" />
+                <Phone className="w-4 h-4 text-foreground" />
                 <span className="text-muted-foreground">+1 (555) 123-4567</span>
               </div>
               <div className="flex items-center gap-3">
-                <MapPin className="w-4 h-4 text-primary" />
+                <MapPin className="w-4 h-4 text-foreground" />
                 <span className="text-muted-foreground">San Francisco, CA</span>
               </div>
             </div>
@@ -87,7 +87,7 @@ const Footer = () => {
                   <li key={linkIndex}>
                     <a 
                       href={link.href}
-                      className="text-muted-foreground hover:text-primary transition-colors duration-200"
+                      className="text-muted-foreground hover:text-foreground transition-colors duration-200"
                     >
                       {link.name}
                     </a>
@@ -113,13 +113,13 @@ const Footer = () => {
               
               <div className="flex items-center gap-4">
                 <span className="text-sm text-muted-foreground">Follow us:</span>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-200">
+                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors duration-200">
                   LinkedIn
                 </a>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-200">
+                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors duration-200">
                   Twitter
                 </a>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-200">
+                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors duration-200">
                   GitHub
                 </a>
               </div>

@@ -19,10 +19,10 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-gradient-to-r from-primary to-primary-glow rounded-xl flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">R</span>
+            <div className="w-10 h-10 bg-foreground rounded-xl flex items-center justify-center">
+              <span className="text-background font-bold text-lg">R</span>
             </div>
-            <span className="text-2xl font-bold text-gradient-primary">Rabbit AI</span>
+            <span className="text-2xl font-bold text-foreground">Rabbit AI</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -40,7 +40,7 @@ const Header = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+            <Button variant="outline" className="border-foreground text-foreground hover:bg-foreground hover:text-background">
               Login
             </Button>
             <Button className="btn-hero-primary text-base px-6 py-2">
@@ -72,7 +72,7 @@ const Header = () => {
                 </a>
               ))}
               <div className="pt-4 space-y-3">
-                <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                <Button variant="outline" className="w-full border-foreground text-foreground hover:bg-foreground hover:text-background">
                   Login
                 </Button>
                 <Button className="w-full btn-hero-primary">

@@ -25,11 +25,11 @@ const CandidateExperience = () => {
   ];
 
   return (
-    <section className="py-32 bg-gradient-to-br from-primary/5 to-secondary/5">
+    <section className="py-32 bg-muted/20">
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="text-center mb-20">
-          <h2 className="text-5xl lg:text-6xl font-bold mb-8 tracking-tight">
-            Exceptional <span className="text-gradient-secondary">Candidate Experience</span>
+          <h2 className="text-5xl lg:text-6xl font-bold mb-8 tracking-tight text-foreground">
+            Exceptional <span className="text-foreground">Candidate Experience</span>
           </h2>
           <p className="text-2xl text-muted-foreground max-w-4xl mx-auto font-light">
             Create positive impressions with candidates through seamless, 
@@ -43,8 +43,8 @@ const CandidateExperience = () => {
               key={index}
               className="text-center group"
             >
-              <div className="w-24 h-24 bg-gradient-to-r from-secondary to-secondary-glow rounded-full flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
-                <experience.icon className="w-12 h-12 text-secondary-foreground" />
+              <div className="w-24 h-24 bg-foreground rounded-full flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
+                <experience.icon className="w-12 h-12 text-background" />
               </div>
               
               <h3 className="text-2xl font-semibold mb-6 text-foreground">{experience.title}</h3>
@@ -58,7 +58,7 @@ const CandidateExperience = () => {
           <div className="inline-flex items-center gap-2 bg-card border border-border rounded-xl px-8 py-4 shadow-md">
             <div className="flex gap-1">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-5 h-5 fill-accent text-accent" />
+                <Star key={i} className="w-5 h-5 fill-foreground text-foreground" />
               ))}
             </div>
             <span className="text-lg font-semibold text-foreground ml-2">4.9/5</span>

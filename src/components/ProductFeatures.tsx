@@ -48,8 +48,8 @@ const ProductFeatures = () => {
     <section className="py-32 section-subtle">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="text-center mb-20">
-          <h2 className="text-5xl lg:text-6xl font-bold mb-8 tracking-tight">
-            Powerful <span className="text-gradient-primary">Features</span> for Modern Hiring
+          <h2 className="text-5xl lg:text-6xl font-bold mb-8 tracking-tight text-foreground">
+            Powerful <span className="text-foreground">Features</span> for Modern Hiring
           </h2>
           <p className="text-2xl text-muted-foreground max-w-4xl mx-auto font-light">
             Everything you need to revolutionize your recruitment process, 
@@ -63,8 +63,8 @@ const ProductFeatures = () => {
               key={index}
               className="feature-card text-center group"
             >
-              <div className="w-20 h-20 bg-gradient-to-r from-primary to-primary-glow rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:shadow-glow transition-all duration-300">
-                <feature.icon className="w-10 h-10 text-primary-foreground" />
+              <div className="w-20 h-20 bg-foreground rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:shadow-md transition-all duration-300">
+                <feature.icon className="w-10 h-10 text-background" />
               </div>
               
               <h3 className="text-2xl font-semibold mb-6 text-foreground">{feature.title}</h3>

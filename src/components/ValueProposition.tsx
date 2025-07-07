@@ -14,8 +14,8 @@ const ValueProposition = () => {
     <section className="py-32 section-gradient">
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="text-center mb-20">
-          <h2 className="text-5xl lg:text-6xl font-bold mb-8 tracking-tight">
-            Why <span className="text-gradient-primary">Rabbit AI</span> is a Game-Changer
+          <h2 className="text-5xl lg:text-6xl font-bold mb-8 tracking-tight text-foreground">
+            Why <span className="text-foreground">Rabbit AI</span> is a Game-Changer
           </h2>
           <p className="text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light">
             Transform your hiring process with AI that understands, evaluates, and scales 
@@ -29,8 +29,8 @@ const ValueProposition = () => {
               key={index}
               className="flex items-start gap-6 p-8 rounded-2xl bg-card border border-border hover:shadow-lg transition-all duration-300 group"
             >
-              <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-secondary to-secondary-glow rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Check className="w-6 h-6 text-secondary-foreground" />
+              <div className="flex-shrink-0 w-12 h-12 bg-foreground rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Check className="w-6 h-6 text-background" />
               </div>
               <p className="text-xl text-foreground leading-relaxed font-medium">{benefit}</p>
             </div>

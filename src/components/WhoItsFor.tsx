@@ -26,8 +26,8 @@ const WhoItsFor = () => {
     <section className="py-20 section-subtle">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            Who <span className="text-gradient-primary">Benefits</span> Most?
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-foreground">
+            Who <span className="text-foreground">Benefits</span> Most?
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Rabbit AI is designed to serve organizations of all sizes, 
@@ -41,8 +41,8 @@ const WhoItsFor = () => {
               key={index}
               className="feature-card text-center group"
             >
-              <div className="w-20 h-20 bg-gradient-to-r from-accent to-accent-glow rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-cta">
-                <segment.icon className="w-10 h-10 text-accent-foreground" />
+              <div className="w-20 h-20 bg-foreground rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-md">
+                <segment.icon className="w-10 h-10 text-background" />
               </div>
               
               <h3 className="text-2xl font-semibold mb-4 text-foreground">{segment.title}</h3>
@@ -51,7 +51,7 @@ const WhoItsFor = () => {
               <ul className="space-y-2 text-left">
                 {segment.benefits.map((benefit, idx) => (
                   <li key={idx} className="flex items-center gap-3">
-                    <div className="w-2 h-2 bg-gradient-to-r from-secondary to-secondary-glow rounded-full"></div>
+                    <div className="w-2 h-2 bg-foreground rounded-full"></div>
                     <span className="text-foreground">{benefit}</span>
                   </li>
                 ))}

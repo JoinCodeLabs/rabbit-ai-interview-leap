@@ -36,8 +36,8 @@ const HowItWorks = () => {
     <section className="py-32 bg-background">
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="text-center mb-20">
-          <h2 className="text-5xl lg:text-6xl font-bold mb-8 tracking-tight">
-            How <span className="text-gradient-accent">It Works</span>
+          <h2 className="text-5xl lg:text-6xl font-bold mb-8 tracking-tight text-foreground">
+            How <span className="text-foreground">It Works</span>
           </h2>
           <p className="text-2xl text-muted-foreground max-w-4xl mx-auto font-light">
             Get started in minutes with our intuitive platform designed for enterprise hiring needs.
@@ -50,8 +50,8 @@ const HowItWorks = () => {
               key={index}
               className="relative feature-card group"
             >
-              <div className="absolute -top-6 -left-6 w-16 h-16 bg-gradient-to-r from-primary to-primary-glow rounded-full flex items-center justify-center shadow-glow">
-                <span className="text-primary-foreground font-bold text-xl">{step.number}</span>
+              <div className="absolute -top-6 -left-6 w-16 h-16 bg-foreground rounded-full flex items-center justify-center shadow-md">
+                <span className="text-background font-bold text-xl">{step.number}</span>
               </div>
               
               <div className="pt-8">
@@ -61,7 +61,7 @@ const HowItWorks = () => {
 
               {/* Connection line for larger screens */}
               {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-1/2 -right-6 w-12 h-0.5 bg-gradient-to-r from-primary/50 to-transparent transform -translate-y-1/2"></div>
+                <div className="hidden lg:block absolute top-1/2 -right-6 w-12 h-0.5 bg-foreground/30 transform -translate-y-1/2"></div>
               )}
             </div>
           ))}
