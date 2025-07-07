@@ -1,42 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Rabbit AI Design System - Professional, Trust, Innovation */
 
 @layer base {
   :root {
+    /* Core Brand Colors */
+    --primary: 240 78% 58%; /* Deep blue for trust and professionalism */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 240 100% 70%;
+    
+    /* Secondary Brand */
+    --secondary: 142 76% 36%; /* Professional green for success */
+    --secondary-foreground: 0 0% 100%;
+    --secondary-glow: 142 76% 50%;
+    
+    /* Accent Colors */
+    --accent: 24 100% 50%; /* Orange for CTAs and highlights */
+    --accent-foreground: 0 0% 100%;
+    --accent-glow: 24 100% 65%;
+    
+    /* Neutral Palette */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    --foreground: 215 20% 15%;
+    --muted: 210 20% 95%;
+    --muted-foreground: 215 15% 55%;
+    
+    /* UI Elements */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 215 20% 15%;
+    --border: 210 20% 90%;
+    --input: 210 20% 96%;
+    --ring: 240 78% 58%;
+    
+    /* Interactive Elements */
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    --popover-foreground: 215 20% 15%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(240 78% 58%), hsl(240 100% 70%));
+    --gradient-cta: linear-gradient(135deg, hsl(24 100% 50%), hsl(24 100% 65%));
+    --gradient-secondary: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 50%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 20% 98%));
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 3px 0 hsl(215 20% 15% / 0.1);
+    --shadow-md: 0 4px 12px -2px hsl(215 20% 15% / 0.12);
+    --shadow-lg: 0 10px 25px -5px hsl(215 20% 15% / 0.15);
+    --shadow-glow: 0 0 40px hsl(240 100% 70% / 0.3);
+    --shadow-cta: 0 8px 25px -8px hsl(24 100% 50% / 0.4);
+    
+    /* Spacing & Layout */
+    --radius: 0.75rem;
+    --container-padding: 1.5rem;
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +125,102 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+  }
+}
+
+@layer components {
+  /* Hero Button Variants */
+  .btn-hero-primary {
+    @apply bg-gradient-to-r from-primary to-primary-glow text-primary-foreground 
+           px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-glow 
+           transform hover:scale-105 transition-all duration-300;
+  }
+  
+  .btn-hero-secondary {
+    @apply bg-gradient-to-r from-accent to-accent-glow text-accent-foreground 
+           px-8 py-4 rounded-xl font-semibold text-lg shadow-cta hover:shadow-lg 
+           transform hover:scale-105 transition-all duration-300;
+  }
+  
+  .btn-outline-hero {
+    @apply border-2 border-primary text-primary bg-transparent px-8 py-4 rounded-xl 
+           font-semibold text-lg hover:bg-primary hover:text-primary-foreground 
+           transform hover:scale-105 transition-all duration-300;
+  }
+
+  /* Section Backgrounds */
+  .section-gradient {
+    @apply bg-gradient-to-br from-background to-muted;
+  }
+  
+  .section-subtle {
+    @apply bg-gradient-to-b from-muted/30 to-background;
+  }
+
+  /* Card Styles */
+  .feature-card {
+    @apply bg-card border border-border rounded-2xl p-8 shadow-md hover:shadow-lg 
+           transform hover:scale-105 transition-all duration-300;
+  }
+  
+  .testimonial-card {
+    @apply bg-card border border-border rounded-2xl p-6 shadow-md hover:shadow-lg 
+           transition-all duration-300;
+  }
+
+  /* Text Gradients */
+  .text-gradient-primary {
+    @apply bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-accent {
+    @apply bg-gradient-to-r from-accent to-accent-glow bg-clip-text text-transparent;
+  }
+
+  /* Animation Classes */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out;
+  }
+  
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
