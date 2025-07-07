@@ -133,19 +133,19 @@
   /* Hero Button Variants */
   .btn-hero-primary {
     @apply bg-gradient-to-r from-primary to-primary-glow text-primary-foreground 
-           px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-glow 
+           font-semibold shadow-lg hover:shadow-glow 
            transform hover:scale-105 transition-all duration-300;
   }
   
   .btn-hero-secondary {
     @apply bg-gradient-to-r from-accent to-accent-glow text-accent-foreground 
-           px-8 py-4 rounded-xl font-semibold text-lg shadow-cta hover:shadow-lg 
+           font-semibold shadow-cta hover:shadow-lg 
            transform hover:scale-105 transition-all duration-300;
   }
   
   .btn-outline-hero {
-    @apply border-2 border-primary text-primary bg-transparent px-8 py-4 rounded-xl 
-           font-semibold text-lg hover:bg-primary hover:text-primary-foreground 
+    @apply border-2 border-primary text-primary bg-transparent 
+           font-semibold hover:bg-primary hover:text-primary-foreground 
            transform hover:scale-105 transition-all duration-300;
   }
 

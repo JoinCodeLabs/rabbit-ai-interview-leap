@@ -45,30 +45,30 @@ const ProductFeatures = () => {
   ];
 
   return (
-    <section className="py-20 section-subtle">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+    <section className="py-32 section-subtle">
+      <div className="container mx-auto px-6 max-w-7xl">
+        <div className="text-center mb-20">
+          <h2 className="text-5xl lg:text-6xl font-bold mb-8 tracking-tight">
             Powerful <span className="text-gradient-primary">Features</span> for Modern Hiring
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-2xl text-muted-foreground max-w-4xl mx-auto font-light">
             Everything you need to revolutionize your recruitment process, 
             from AI-powered interviews to enterprise-grade security.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
           {features.map((feature, index) => (
             <div 
               key={index}
               className="feature-card text-center group"
             >
-              <div className="w-16 h-16 bg-gradient-to-r from-primary to-primary-glow rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:shadow-glow transition-all duration-300">
-                <feature.icon className="w-8 h-8 text-primary-foreground" />
+              <div className="w-20 h-20 bg-gradient-to-r from-primary to-primary-glow rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:shadow-glow transition-all duration-300">
+                <feature.icon className="w-10 h-10 text-primary-foreground" />
               </div>
               
-              <h3 className="text-xl font-semibold mb-4 text-foreground">{feature.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
+              <h3 className="text-2xl font-semibold mb-6 text-foreground">{feature.title}</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>

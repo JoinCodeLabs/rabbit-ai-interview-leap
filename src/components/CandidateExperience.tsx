@@ -25,30 +25,30 @@ const CandidateExperience = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-primary/5 to-secondary/5">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+    <section className="py-32 bg-gradient-to-br from-primary/5 to-secondary/5">
+      <div className="container mx-auto px-6 max-w-6xl">
+        <div className="text-center mb-20">
+          <h2 className="text-5xl lg:text-6xl font-bold mb-8 tracking-tight">
             Exceptional <span className="text-gradient-secondary">Candidate Experience</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-2xl text-muted-foreground max-w-4xl mx-auto font-light">
             Create positive impressions with candidates through seamless, 
             modern interview experiences that reflect your company's innovation.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {experiences.map((experience, index) => (
             <div 
               key={index}
               className="text-center group"
             >
-              <div className="w-20 h-20 bg-gradient-to-r from-secondary to-secondary-glow rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <experience.icon className="w-10 h-10 text-secondary-foreground" />
+              <div className="w-24 h-24 bg-gradient-to-r from-secondary to-secondary-glow rounded-full flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
+                <experience.icon className="w-12 h-12 text-secondary-foreground" />
               </div>
               
-              <h3 className="text-xl font-semibold mb-4 text-foreground">{experience.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{experience.description}</p>
+              <h3 className="text-2xl font-semibold mb-6 text-foreground">{experience.title}</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">{experience.description}</p>
             </div>
           ))}
         </div>
