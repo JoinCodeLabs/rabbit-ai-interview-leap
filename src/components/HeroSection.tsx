@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
+import TechBackground from "./TechBackground";
 
 const HeroSection = () => {
   return (
     <section className="min-h-screen flex items-center justify-center hero-gradient px-6 py-32 relative overflow-hidden">
+      <TechBackground />
       <div className="container mx-auto max-w-5xl relative z-10">
         <div className="text-center">
           <h1 className="text-6xl lg:text-8xl font-bold mb-8 leading-[0.9] tracking-tight text-white animate-fade-in">
