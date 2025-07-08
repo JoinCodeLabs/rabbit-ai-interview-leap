@@ -21,12 +21,12 @@ const FinalCTA = () => {
 
           {/* Main CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <button className="bg-background text-foreground px-10 py-5 rounded-xl font-semibold text-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center gap-3">
+            <button className="bg-background text-foreground px-10 py-5 rounded-xl font-semibold text-xl shadow-lg hover:shadow-xl btn-interactive flex items-center gap-3 justify-center">
               <Play className="w-6 h-6" />
               Book a Demo
               <ArrowRight className="w-6 h-6" />
             </button>
-            <button className="border-2 border-background text-background bg-transparent px-10 py-5 rounded-xl font-semibold text-xl hover:bg-background hover:text-foreground transform hover:scale-105 transition-all duration-300 flex items-center gap-3">
+            <button className="border-2 border-background text-background bg-transparent px-10 py-5 rounded-xl font-semibold text-xl btn-interactive flex items-center gap-3 justify-center">
               Start Free Trial
               <ArrowRight className="w-6 h-6" />
             </button>

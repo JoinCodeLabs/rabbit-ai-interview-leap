@@ -1,6 +1,8 @@
 import { Check } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const ValueProposition = () => {
+  const sectionRef = useScrollAnimation();
   const benefits = [
     "Conduct all types of interviews (coding, technical, non-tech, HR, case studies)",
     "Live, human-like AI interviewer available 24x7x365",
@@ -11,7 +13,7 @@ const ValueProposition = () => {
   ];
 
   return (
-    <section className="py-32 section-gradient">
+    <section ref={sectionRef} className="py-32 section-gradient section-animate">
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="text-center mb-20">
           <h2 className="text-5xl lg:text-6xl font-bold mb-8 tracking-tight text-foreground">
@@ -27,7 +29,7 @@ const ValueProposition = () => {
           {benefits.map((benefit, index) => (
             <div 
               key={index}
-              className="flex items-start gap-6 p-8 rounded-2xl bg-card border border-border hover:shadow-lg transition-all duration-300 group"
+              className="flex items-start gap-6 p-8 rounded-2xl bg-card border border-border hover:shadow-lg transition-all duration-300 group hover:scale-105"
             >
               <div className="flex-shrink-0 w-12 h-12 bg-foreground rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Check className="w-6 h-6 text-background" />

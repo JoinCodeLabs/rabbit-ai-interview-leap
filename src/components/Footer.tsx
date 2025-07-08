@@ -100,28 +100,30 @@ const Footer = () => {
 
         {/* Bottom Section */}
         <div className="border-t border-border mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-muted-foreground text-sm">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-4">
+            <div className="text-muted-foreground text-sm text-center md:text-left">
               © 2024 Rabbit AI. All rights reserved.
             </div>
             
-            <div className="flex items-center gap-6">
+            <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <Globe className="w-4 h-4" />
                 <span>Available in 120+ languages</span>
               </div>
               
-              <div className="flex items-center gap-4">
+              <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
                 <span className="text-sm text-muted-foreground">Follow us:</span>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors duration-200">
-                  LinkedIn
-                </a>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors duration-200">
-                  Twitter
-                </a>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors duration-200">
-                  GitHub
-                </a>
+                <div className="flex gap-4">
+                  <a href="#" className="text-muted-foreground hover:text-foreground transition-colors duration-200">
+                    LinkedIn
+                  </a>
+                  <a href="#" className="text-muted-foreground hover:text-foreground transition-colors duration-200">
+                    Twitter
+                  </a>
+                  <a href="#" className="text-muted-foreground hover:text-foreground transition-colors duration-200">
+                    GitHub
+                  </a>
+                </div>
               </div>
             </div>
           </div>

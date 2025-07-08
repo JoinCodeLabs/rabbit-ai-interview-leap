@@ -167,6 +167,44 @@
   .animate-scale-in {
     animation: scaleIn 0.5s ease-out;
   }
+
+  .animate-fade-in-delayed {
+    animation: fadeIn 0.8s ease-out 0.2s both;
+  }
+
+  /* Hero Gradient Background */
+  .hero-gradient {
+    background: linear-gradient(135deg, 
+      #667eea 0%, 
+      #764ba2 25%, 
+      #f093fb 50%, 
+      #f5576c 75%, 
+      #4facfe 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+  }
+
+  /* Interactive Button Effects */
+  .btn-interactive {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .btn-interactive:hover {
+    transform: scale(1.05);
+    filter: invert(1);
+  }
+
+  /* Section Animation */
+  .section-animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+  }
+
+  .section-animate.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeIn {
@@ -199,5 +237,17 @@
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
