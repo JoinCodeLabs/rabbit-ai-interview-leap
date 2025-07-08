@@ -47,9 +47,9 @@ const Footer = () => {
   return (
     <footer className="bg-muted/30 border-t border-border">
       <div className="container mx-auto px-6 py-16">
-        <div className="grid lg:grid-cols-5 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
           {/* Brand Section */}
-          <div className="lg:col-span-1">
+          <div className="col-span-1 md:col-span-2 lg:col-span-1 mb-8 md:mb-0">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 bg-foreground rounded-xl flex items-center justify-center">
                 <span className="text-background font-bold text-lg">R</span>
@@ -79,23 +79,25 @@ const Footer = () => {
           </div>
 
           {/* Footer Links */}
-          {footerSections.map((section, index) => (
-            <div key={index}>
-              <h4 className="font-semibold text-foreground mb-4">{section.title}</h4>
-              <ul className="space-y-3">
-                {section.links.map((link, linkIndex) => (
-                  <li key={linkIndex}>
-                    <a 
-                      href={link.href}
-                      className="text-muted-foreground hover:text-foreground transition-colors duration-200"
-                    >
-                      {link.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <div className="col-span-1 md:col-span-2 lg:col-span-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {footerSections.map((section, index) => (
+              <div key={index} className="mb-6 sm:mb-0">
+                <h4 className="font-semibold text-foreground mb-4">{section.title}</h4>
+                <ul className="space-y-3">
+                  {section.links.map((link, linkIndex) => (
+                    <li key={linkIndex}>
+                      <a 
+                        href={link.href}
+                        className="text-muted-foreground hover:text-foreground transition-colors duration-200 text-sm"
+                      >
+                        {link.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Bottom Section */}
