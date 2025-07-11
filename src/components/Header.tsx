@@ -14,7 +14,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border shadow-sm">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -40,10 +40,10 @@ const Header = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-4">
-            <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+            <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300">
               Login
             </Button>
-            <Button className="cta-button text-base px-6 py-2">
+            <Button className="cta-primary text-base px-6 py-2.5">
               Book Demo
             </Button>
           </div>
@@ -75,7 +75,7 @@ const Header = () => {
                 <Button variant="outline" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                   Login
                 </Button>
-                <Button className="w-full cta-button">
+                <Button className="w-full cta-primary">
                   Book Demo
                 </Button>
               </div>

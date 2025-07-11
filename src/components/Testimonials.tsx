@@ -26,11 +26,11 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-6">
+    <section className="py-20 section-subtle">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-foreground">
-            What Our <span className="text-foreground">Clients Say</span>
+            What Our <span className="text-primary">Clients Say</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Real feedback from hiring teams who have revolutionized their recruitment 
@@ -81,10 +81,10 @@ const Testimonials = () => {
               See why leading companies trust Rabbit AI for their most critical hiring decisions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="cta-button px-8 py-3 rounded-lg font-semibold">
+              <button className="cta-primary">
                 Schedule Demo
               </button>
-              <button className="cta-button-outline px-8 py-3 rounded-lg font-semibold">
+              <button className="cta-secondary">
                 View Case Studies
               </button>
             </div>
