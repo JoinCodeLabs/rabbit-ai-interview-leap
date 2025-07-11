@@ -63,8 +63,8 @@ const ProductFeatures = () => {
               key={index}
               className="feature-card text-center group"
             >
-              <div className="w-20 h-20 bg-foreground rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:shadow-md transition-all duration-300">
-                <feature.icon className="w-10 h-10 text-background" />
+              <div className="w-20 h-20 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:shadow-lg group-hover:scale-110 transition-all duration-300">
+                <feature.icon className="w-10 h-10 text-primary-foreground" />
               </div>
               
               <h3 className="text-2xl font-semibold mb-6 text-foreground">{feature.title}</h3>

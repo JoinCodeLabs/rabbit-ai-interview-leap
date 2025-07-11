@@ -4,40 +4,40 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Rabbit AI Design System - Monochrome Professional */
+/* Rabbit AI Design System - Branded Blue Professional */
 
 @layer base {
   :root {
-    /* Monochrome Palette */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
-    --muted: 0 0% 95%;
-    --muted-foreground: 0 0% 40%;
+    /* Clean Palette with Branded Blue */
+    --background: 0 0% 98%;
+    --foreground: 220 25% 15%;
+    --muted: 220 10% 92%;
+    --muted-foreground: 220 8% 45%;
     
     /* UI Elements */
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
-    --border: 0 0% 90%;
-    --input: 0 0% 96%;
-    --ring: 0 0% 0%;
+    --card-foreground: 220 25% 15%;
+    --border: 220 10% 88%;
+    --input: 220 8% 94%;
+    --ring: 220 100% 55%;
     
     /* Interactive Elements */
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
-    --destructive: 0 0% 0%;
-    --destructive-foreground: 0 0% 100%;
+    --popover-foreground: 220 25% 15%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
     
-    /* Primary (Black) */
-    --primary: 0 0% 0%;
-    --primary-foreground: 0 0% 100%;
+    /* Primary (Branded Blue #1845F5) */
+    --primary: 220 100% 55%;
+    --primary-foreground: 0 0% 98%;
     
-    /* Secondary (White) */
-    --secondary: 0 0% 100%;
-    --secondary-foreground: 0 0% 0%;
+    /* Secondary (Light Blue Accent) */
+    --secondary: 220 60% 96%;
+    --secondary-foreground: 220 100% 55%;
     
-    /* Accent (Black) */
-    --accent: 0 0% 0%;
-    --accent-foreground: 0 0% 100%;
+    /* Accent (Blue Variant) */
+    --accent: 220 80% 92%;
+    --accent-foreground: 220 100% 55%;
     
     /* Shadows */
     --shadow-sm: 0 1px 3px 0 hsl(0 0% 0% / 0.1);
@@ -61,25 +61,25 @@
   }
 
   .dark {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
-    --card: 0 0% 0%;
-    --card-foreground: 0 0% 100%;
-    --popover: 0 0% 0%;
-    --popover-foreground: 0 0% 100%;
-    --primary: 0 0% 100%;
-    --primary-foreground: 0 0% 0%;
-    --secondary: 0 0% 10%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 0 0% 10%;
-    --muted-foreground: 0 0% 60%;
-    --accent: 0 0% 100%;
-    --accent-foreground: 0 0% 0%;
-    --destructive: 0 0% 100%;
-    --destructive-foreground: 0 0% 0%;
-    --border: 0 0% 15%;
-    --input: 0 0% 15%;
-    --ring: 0 0% 100%;
+    --background: 220 30% 8%;
+    --foreground: 220 10% 95%;
+    --card: 220 25% 10%;
+    --card-foreground: 220 10% 95%;
+    --popover: 220 25% 10%;
+    --popover-foreground: 220 10% 95%;
+    --primary: 220 100% 65%;
+    --primary-foreground: 220 30% 8%;
+    --secondary: 220 40% 15%;
+    --secondary-foreground: 220 100% 65%;
+    --muted: 220 25% 12%;
+    --muted-foreground: 220 8% 60%;
+    --accent: 220 40% 15%;
+    --accent-foreground: 220 100% 65%;
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 220 30% 8%;
+    --border: 220 20% 18%;
+    --input: 220 20% 18%;
+    --ring: 220 100% 65%;
     --sidebar-background: 0 0% 5%;
     --sidebar-foreground: 0 0% 95%;
     --sidebar-primary: 0 0% 100%;
@@ -133,13 +133,28 @@
 
   /* Card Styles */
   .feature-card {
-    @apply bg-card border border-border rounded-xl p-8 shadow-sm hover:shadow-md 
-           transform hover:scale-105 transition-all duration-300;
+    @apply bg-card border border-border rounded-xl p-8 shadow-sm hover:shadow-lg 
+           transform hover:scale-[1.02] hover:-translate-y-1 transition-all duration-300
+           hover:border-primary/20;
   }
   
   .testimonial-card {
-    @apply bg-card border border-border rounded-xl p-6 shadow-sm hover:shadow-md 
-           transition-all duration-300;
+    @apply bg-card border border-border rounded-xl p-6 shadow-sm hover:shadow-lg 
+           transform hover:scale-[1.01] hover:-translate-y-0.5 transition-all duration-300
+           hover:border-primary/20;
+  }
+
+  /* Interactive Elements */
+  .cta-button {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 
+           transform hover:scale-105 transition-all duration-300 
+           shadow-sm hover:shadow-md;
+  }
+
+  .cta-button-outline {
+    @apply border-2 border-primary text-primary bg-transparent 
+           hover:bg-primary hover:text-primary-foreground
+           transform hover:scale-105 transition-all duration-300;
   }
 
   /* Text Gradients - Now just black */
@@ -172,16 +187,26 @@
     animation: fadeIn 0.8s ease-out 0.2s both;
   }
 
-  /* Hero Gradient Background */
+  /* Hero Gradient Background - AI Theme */
   .hero-gradient {
     background: linear-gradient(135deg, 
-      #667eea 0%, 
-      #764ba2 25%, 
-      #f093fb 50%, 
-      #f5576c 75%, 
-      #4facfe 100%);
+      hsl(220, 100%, 55%) 0%,
+      hsl(230, 100%, 60%) 25%, 
+      hsl(210, 100%, 65%) 50%, 
+      hsl(240, 100%, 70%) 75%, 
+      hsl(220, 100%, 55%) 100%);
     background-size: 400% 400%;
-    animation: gradientShift 8s ease infinite;
+    animation: gradientShift 12s ease infinite;
+  }
+
+  /* AI Neural Network Background */
+  .ai-background {
+    background-image: 
+      radial-gradient(circle at 20% 50%, hsl(220, 100%, 55%) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsl(230, 100%, 60%) 0%, transparent 50%),
+      radial-gradient(circle at 40% 80%, hsl(210, 100%, 65%) 0%, transparent 50%);
+    background-size: 800px 800px, 600px 600px, 700px 700px;
+    animation: float 20s ease-in-out infinite;
   }
 
   /* Interactive Button Effects */
@@ -249,5 +274,17 @@
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-30px) rotate(1deg);
+  }
+  66% {
+    transform: translateY(-20px) rotate(-1deg);
   }
 }

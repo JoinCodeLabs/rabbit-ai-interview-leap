@@ -45,14 +45,14 @@ const Testimonials = () => {
               className="testimonial-card group relative"
             >
               {/* Quote Icon */}
-              <div className="absolute -top-4 -left-4 w-12 h-12 bg-foreground rounded-full flex items-center justify-center shadow-md">
-                <Quote className="w-6 h-6 text-background" />
+              <div className="absolute -top-4 -left-4 w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
+                <Quote className="w-6 h-6 text-primary-foreground" />
               </div>
 
               {/* Rating */}
               <div className="flex gap-1 mb-4 pt-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-foreground text-foreground" />
+                  <Star key={i} className="w-5 h-5 fill-primary text-primary" />
                 ))}
               </div>
 
@@ -81,10 +81,10 @@ const Testimonials = () => {
               See why leading companies trust Rabbit AI for their most critical hiring decisions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-hero-primary">
+              <button className="cta-button px-8 py-3 rounded-lg font-semibold">
                 Schedule Demo
               </button>
-              <button className="btn-outline-hero">
+              <button className="cta-button-outline px-8 py-3 rounded-lg font-semibold">
                 View Case Studies
               </button>
             </div>
