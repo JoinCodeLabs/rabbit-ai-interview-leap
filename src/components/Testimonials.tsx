@@ -26,69 +26,56 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-20 section-subtle">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-foreground">
-            What Our <span className="text-primary">Clients Say</span>
+    <section className="py-32 section-dark">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-20">
+          <h2 className="text-5xl lg:text-6xl font-black mb-8 text-foreground">
+            What Our <span className="bg-gradient-to-r from-primary to-accent-purple bg-clip-text text-transparent">Customers Say</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Real feedback from hiring teams who have revolutionized their recruitment 
-            process with Rabbit AI.
+          <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto font-light">
+            Join hundreds of companies transforming their hiring process with Rabbit AI.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div 
-              key={index}
-              className="testimonial-card group relative"
-            >
-              {/* Quote Icon */}
-              <div className="absolute -top-4 -left-4 w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
-                <Quote className="w-6 h-6 text-primary-foreground" />
-              </div>
-
-              {/* Rating */}
-              <div className="flex gap-1 mb-4 pt-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-primary text-primary" />
-                ))}
-              </div>
-
-              {/* Quote */}
-              <blockquote className="text-foreground leading-relaxed mb-6 italic">
-                "{testimonial.quote}"
-              </blockquote>
-
-              {/* Author */}
-              <div className="border-t border-border pt-4">
-                <div className="font-semibold text-foreground">{testimonial.author}</div>
-                <div className="text-sm text-muted-foreground">{testimonial.title}</div>
-                <div className="text-sm font-medium text-foreground">{testimonial.company}</div>
+            <div key={index} className="testimonial-card">
+              <div className="relative z-10">
+                <div className="flex items-center mb-8">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-accent-purple/20 rounded-2xl flex items-center justify-center mr-4 shadow-lg">
+                    <span className="text-primary font-bold text-xl">
+                      {testimonial.author.charAt(0)}
+                    </span>
+                  </div>
+                  <div>
+                    <div className="font-bold text-foreground text-lg">{testimonial.author}</div>
+                    <div className="text-sm text-primary font-medium">{testimonial.title}</div>
+                    <div className="text-sm text-muted-foreground">{testimonial.company}</div>
+                  </div>
+                </div>
+                
+                <blockquote className="text-foreground leading-relaxed mb-6 text-lg font-medium">
+                  "{testimonial.quote}"
+                </blockquote>
+                
+                <div className="flex items-center">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className={`w-5 h-5 ${
+                        i < testimonial.rating
+                          ? 'text-amber-400 fill-current'
+                          : 'text-gray-300'
+                      }`}
+                    />
+                  ))}
+                  <span className="text-sm text-muted-foreground ml-3 font-medium">
+                    {testimonial.rating}/5
+                  </span>
+                </div>
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Call to Action */}
-        <div className="mt-16 text-center">
-          <div className="bg-muted/30 rounded-2xl p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-semibold mb-4 text-foreground">
-              Join the Future of Hiring Today
-            </h3>
-            <p className="text-muted-foreground mb-6">
-              See why leading companies trust Rabbit AI for their most critical hiring decisions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="cta-primary">
-                Schedule Demo
-              </button>
-              <button className="cta-secondary">
-                View Case Studies
-              </button>
-            </div>
-          </div>
         </div>
       </div>
     </section>

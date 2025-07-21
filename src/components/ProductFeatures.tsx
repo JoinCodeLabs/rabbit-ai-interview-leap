@@ -45,31 +45,33 @@ const ProductFeatures = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-24 section-gradient" id="features">
       <div className="container mx-auto px-4 max-w-7xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6 tracking-tight text-foreground">
-            Powerful Features for <span className="text-primary">Modern Hiring</span>
+        <div className="text-center mb-20">
+          <h2 className="text-5xl lg:text-6xl font-black mb-8 tracking-tight text-foreground">
+            Powerful Features for <span className="bg-gradient-to-r from-primary to-accent-purple bg-clip-text text-transparent">Modern Hiring</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto font-light leading-relaxed">
             Everything you need to revolutionize your recruitment process, 
             from AI-powered interviews to enterprise-grade security.
           </p>
         </div>
 
-        {/* Bento Grid Layout */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Modern Bento Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="feature-card text-center group"
+              className="feature-card text-center group relative"
             >
-              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
-                <feature.icon className="w-8 h-8 text-primary" />
+              <div className="relative z-10">
+                <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-accent-purple/20 rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-all duration-500 shadow-lg">
+                  <feature.icon className="w-10 h-10 text-primary" />
+                </div>
+                
+                <h3 className="text-xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors duration-300">{feature.title}</h3>
+                <p className="text-muted-foreground leading-relaxed font-medium">{feature.description}</p>
               </div>
-              
-              <h3 className="text-xl font-semibold mb-4 text-foreground">{feature.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>

@@ -14,15 +14,15 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border shadow-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 glass-effect shadow-sm">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
+          <div className="flex items-center gap-3 group">
+            <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent-purple rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300">
               <span className="text-primary-foreground font-bold text-lg">R</span>
             </div>
-            <span className="text-2xl font-bold text-foreground">Rabbit AI</span>
+            <span className="text-2xl font-bold text-foreground tracking-tight">Rabbit AI</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -31,19 +31,20 @@ const Header = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200 font-medium"
+                className="text-muted-foreground hover:text-foreground transition-all duration-300 font-medium relative group py-2"
               >
                 {item.name}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
           </nav>
 
           {/* Desktop CTA */}
-          <div className="hidden md:flex items-center gap-4">
-            <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300">
+          <div className="hidden md:flex items-center gap-3">
+            <Button variant="outline" className="border-primary/20 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 font-medium">
               Login
             </Button>
-            <Button className="cta-primary text-base px-6 py-2.5">
+            <Button className="cta-primary text-base px-6 py-2.5 group">
               Book Demo
             </Button>
           </div>
