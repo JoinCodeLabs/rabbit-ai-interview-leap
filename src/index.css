@@ -164,10 +164,10 @@
   /* Premium CTA Buttons */
   .cta-primary {
     background: var(--gradient-primary);
-    @apply text-primary-foreground hover:shadow-glow
+    @apply text-primary-foreground hover:shadow-2xl
            px-8 py-4 rounded-xl font-semibold text-lg
            transform hover:scale-105 transition-all duration-300 
-           shadow-lg hover:shadow-xl border-0 relative overflow-hidden;
+           shadow-lg border-0 relative overflow-hidden;
   }
   
   .cta-primary::before {
