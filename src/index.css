@@ -132,7 +132,7 @@
     background: var(--gradient-card);
     @apply border border-border rounded-xl p-8 shadow-md hover:shadow-xl 
            transform hover:scale-[1.02] hover:-translate-y-2 transition-all duration-500
-           backdrop-blur-sm relative overflow-hidden group;
+           backdrop-blur-sm relative overflow-hidden;
   }
   
   .feature-card::before {
