@@ -150,8 +150,8 @@
   
   .bento-card::before {
     content: '';
-    @apply absolute inset-0 bg-gradient-to-br from-primary/3 to-accent-purple/3 opacity-0 
-           group-hover:opacity-100 transition-opacity duration-500;
+    @apply absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 opacity-0 
+           hover:opacity-100 transition-opacity duration-500;
   }
   
   .testimonial-card {
