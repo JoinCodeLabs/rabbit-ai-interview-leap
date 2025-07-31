@@ -10,120 +10,151 @@ const HeroSection = () => {
       <div className="absolute bottom-40 right-20 w-48 h-48 bg-gradient-to-br from-accent-purple/10 to-primary/10 rounded-full blur-3xl floating-shapes" style={{animationDelay: '5s'}}></div>
       
       <div className="container mx-auto max-w-7xl relative z-10">
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center min-h-[90vh]">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-[85vh]">
           
-          {/* Left Content - Modern Layout */}
-          <div className="lg:col-span-6 space-y-12">
-            {/* AI Badge with modern styling */}
-            <div className="inline-flex items-center gap-3 bg-white/80 backdrop-blur-xl rounded-full px-6 py-3 border border-primary/10 shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in">
+          {/* Left Content */}
+          <div className="space-y-8 lg:pr-8">
+            {/* AI Badge */}
+            <div className="inline-flex items-center gap-3 glass-effect rounded-full px-5 py-3 animate-fade-in shadow-md">
               <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
               <Bot className="w-5 h-5 text-primary" />
               <span className="text-primary text-sm font-semibold tracking-wide">Powered by Advanced AI</span>
             </div>
 
-            {/* Main Headline - Enhanced Typography */}
-            <div className="space-y-8 animate-fade-in">
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-[0.85] tracking-tight text-foreground">
-                Build & grow with
+            {/* Main Headline */}
+            <div className="space-y-6 animate-fade-in">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black leading-[0.9] tracking-tight text-foreground">
+                AI That
                 <br />
-                <span className="bg-gradient-to-r from-primary via-accent-purple to-primary bg-clip-text text-transparent">
-                  scalable interviews
+                <span className="bg-gradient-to-r from-primary via-accent-purple to-primary bg-clip-text text-transparent animate-shimmer bg-300% bg-size-200">
+                  Interviews
                 </span>
+                <br />
+                Like Humans
               </h1>
               
-              <p className="text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-xl font-light">
-                Easily adapt to changes and scale your hiring operations with our flexible AI infrastructure, 
-                <span className="text-foreground font-medium">designed to support your business growth.</span>
+              <p className="text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-2xl font-light">
+                Transform hiring with AI that conducts natural, human-like interviews 24/7. 
+                <span className="text-foreground font-medium">Scale your recruitment without limits.</span>
               </p>
             </div>
             
-            {/* CTA Buttons - Modern Styling */}
+            {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-delayed">
-              <Button className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-semibold px-8 py-4 rounded-xl text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-0">
-                Features →
+              <Button className="cta-primary group text-lg px-8 py-4">
+                <span className="relative z-10">Book a Demo</span>
               </Button>
-              <Button variant="outline" className="border-2 border-muted-foreground/20 text-foreground hover:bg-muted/50 px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300">
-                Pricing
+              <Button className="cta-secondary text-lg px-8 py-4">
+                Start Free Trial
               </Button>
             </div>
 
-            {/* Social Proof - Modern Cards */}
-            <div className="flex items-center gap-4 pt-8 animate-slide-up">
-              <div className="flex -space-x-3">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full border-3 border-white shadow-lg"></div>
-                <div className="w-12 h-12 bg-gradient-to-br from-emerald-400 to-blue-500 rounded-full border-3 border-white shadow-lg"></div>
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full border-3 border-white shadow-lg"></div>
-                <div className="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full border-3 border-white shadow-lg flex items-center justify-center">
-                  <span className="text-white text-sm font-bold">10K+</span>
+            {/* Quick Stats */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-8 animate-slide-up">
+              <div className="text-center space-y-3 group">
+                <div className="w-14 h-14 bg-gradient-to-br from-primary/20 to-accent-purple/20 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300 shadow-md">
+                  <Zap className="w-7 h-7 text-primary" />
                 </div>
+                <div className="text-3xl lg:text-4xl font-black text-foreground">80%</div>
+                <div className="text-sm text-muted-foreground font-medium">Faster Hiring</div>
               </div>
-              <div>
-                <p className="text-muted-foreground text-sm">10,000+ people already joined the platform</p>
+              <div className="text-center space-y-3 group">
+                <div className="w-14 h-14 bg-gradient-to-br from-accent-emerald/20 to-primary/20 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300 shadow-md">
+                  <Bot className="w-7 h-7 text-accent-emerald" />
+                </div>
+                <div className="text-3xl lg:text-4xl font-black text-foreground">60%</div>
+                <div className="text-sm text-muted-foreground font-medium">Cost Reduction</div>
+              </div>
+              <div className="text-center space-y-3 group">
+                <div className="w-14 h-14 bg-gradient-to-br from-accent-amber/20 to-primary/20 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300 shadow-md">
+                  <Clock className="w-7 h-7 text-accent-amber" />
+                </div>
+                <div className="text-3xl lg:text-4xl font-black text-foreground">24/7</div>
+                <div className="text-sm text-muted-foreground font-medium">AI Available</div>
+              </div>
+              <div className="text-center space-y-3 group">
+                <div className="w-14 h-14 bg-gradient-to-br from-accent-purple/20 to-primary/20 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300 shadow-md">
+                  <Users className="w-7 h-7 text-accent-purple" />
+                </div>
+                <div className="text-3xl lg:text-4xl font-black text-foreground">120+</div>
+                <div className="text-sm text-muted-foreground font-medium">Languages</div>
               </div>
             </div>
           </div>
 
-          {/* Right Visual - Modern Floating Cards */}
-          <div className="lg:col-span-6 relative">
-            <div className="relative h-[600px] w-full">
+          {/* Right Visual */}
+          <div className="relative lg:pl-8">
+            <div className="relative max-w-lg mx-auto lg:max-w-none">
               
-              {/* Main Feature Card - Top Right */}
-              <div className="absolute top-0 right-0 w-72 bg-white/90 backdrop-blur-xl rounded-3xl p-6 shadow-2xl border border-white/20 transform hover:scale-105 transition-all duration-500 animate-fade-in">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
-                  <span className="text-sm font-semibold text-foreground">Mobile accessibility</span>
-                </div>
-                <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center mb-4">
-                  <span className="text-white text-sm font-bold">+</span>
+              {/* Main AI Interface */}
+              <div className="relative glass-effect rounded-3xl p-8 shadow-2xl border border-white/20 backdrop-blur-xl">
+                {/* AI Bot Interface */}
+                <div className="space-y-6">
+                  <div className="flex items-center gap-4">
+                    <div className="w-14 h-14 ai-orb shadow-lg"></div>
+                    <div>
+                      <div className="font-bold text-foreground text-lg">Rabbit AI Interviewer</div>
+                      <div className="text-sm text-primary font-medium flex items-center gap-2">
+                        <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+                        Conducting live interview...
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Enhanced Chat Bubbles */}
+                  <div className="space-y-4">
+                    <div className="bg-gradient-to-br from-primary/15 to-accent-purple/10 rounded-2xl rounded-bl-md p-5 max-w-sm border border-primary/20 shadow-sm">
+                      <p className="text-sm text-foreground font-medium">"Tell me about your experience with React hooks and state management?"</p>
+                    </div>
+                    <div className="bg-gradient-to-br from-slate-50 to-slate-100/50 rounded-2xl rounded-br-md p-5 max-w-sm ml-auto border border-slate-200 shadow-sm">
+                      <p className="text-sm text-foreground">"I've worked extensively with useState, useEffect, and Context API for complex state management..."</p>
+                    </div>
+                    <div className="bg-gradient-to-br from-primary/15 to-accent-purple/10 rounded-2xl rounded-bl-md p-5 max-w-sm border border-primary/20 shadow-sm">
+                      <p className="text-sm text-foreground font-medium">"Excellent! Can you walk me through debugging a complex React component?"</p>
+                    </div>
+                  </div>
+                  
+                  {/* Enhanced AI Analysis */}
+                  <div className="border-t border-border/50 pt-6">
+                    <div className="text-xs text-muted-foreground mb-4 font-semibold tracking-wide">REAL-TIME ANALYSIS</div>
+                    <div className="space-y-3">
+                      <div className="flex justify-between items-center">
+                        <span className="text-sm font-medium">Technical Knowledge</span>
+                        <div className="flex items-center gap-2">
+                          <div className="w-16 h-2 bg-slate-200 rounded-full overflow-hidden">
+                            <div className="w-[92%] h-full bg-gradient-to-r from-primary to-accent-emerald rounded-full"></div>
+                          </div>
+                          <span className="text-primary font-bold text-sm">92%</span>
+                        </div>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-sm font-medium">Communication</span>
+                        <div className="flex items-center gap-2">
+                          <div className="w-16 h-2 bg-slate-200 rounded-full overflow-hidden">
+                            <div className="w-[88%] h-full bg-gradient-to-r from-primary to-accent-emerald rounded-full"></div>
+                          </div>
+                          <span className="text-primary font-bold text-sm">88%</span>
+                        </div>
+                      </div>
+                      <div className="flex justify-between items-center">
+                        <span className="text-sm font-medium">Problem Solving</span>
+                        <div className="flex items-center gap-2">
+                          <div className="w-16 h-2 bg-slate-200 rounded-full overflow-hidden">
+                            <div className="w-[85%] h-full bg-gradient-to-r from-primary to-accent-emerald rounded-full"></div>
+                          </div>
+                          <span className="text-primary font-bold text-sm">85%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              {/* Analytics Card - Center Left */}
-              <div className="absolute top-32 left-0 w-80 bg-white/90 backdrop-blur-xl rounded-3xl p-6 shadow-2xl border border-white/20 transform hover:scale-105 transition-all duration-500 animate-fade-in" style={{animationDelay: '0.2s'}}>
-                <div className="mb-4">
-                  <h3 className="text-lg font-bold text-foreground mb-2">Expenses</h3>
-                  <div className="text-right text-xs text-muted-foreground mb-2">Monthly</div>
-                </div>
-                <div className="text-5xl font-bold text-orange-500 mb-4">85%</div>
-                <div className="flex gap-1 items-end h-16">
-                  <div className="bg-orange-500 rounded-full w-4 h-8"></div>
-                  <div className="bg-orange-500 rounded-full w-4 h-10"></div>
-                  <div className="bg-orange-500 rounded-full w-4 h-12"></div>
-                  <div className="bg-orange-500 rounded-full w-4 h-14"></div>
-                  <div className="bg-orange-500 rounded-full w-4 h-16"></div>
-                  <div className="bg-orange-500 rounded-full w-4 h-16"></div>
-                </div>
-              </div>
-
-              {/* Security Card - Bottom Right */}
-              <div className="absolute bottom-0 right-8 w-64 bg-white/90 backdrop-blur-xl rounded-3xl p-6 shadow-2xl border border-white/20 transform hover:scale-105 transition-all duration-500 animate-fade-in" style={{animationDelay: '0.4s'}}>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
-                  <span className="text-sm font-semibold text-foreground">Enhanced security</span>
-                </div>
-                <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
-                  <span className="text-white text-sm font-bold">+</span>
-                </div>
-              </div>
-
-              {/* Action Buttons - Bottom Center */}
-              <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-3 animate-fade-in" style={{animationDelay: '0.6s'}}>
-                <button className="bg-gray-900 text-white px-6 py-3 rounded-xl font-semibold text-sm hover:bg-gray-800 transition-colors duration-300 shadow-lg">
-                  BUY TEMPLATE
-                </button>
-                <button className="bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold text-sm hover:bg-blue-700 transition-colors duration-300 shadow-lg">
-                  SEE ALL TEMPLATES
-                </button>
-              </div>
-
-              {/* Floating Brand Badge */}
-              <div className="absolute bottom-4 right-4 text-xs text-muted-foreground animate-fade-in" style={{animationDelay: '0.8s'}}>
-                ⚡ Made in Framer
-              </div>
-
-              {/* Background Decorative Elements */}
-              <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-orange-500/10 to-red-500/10 rounded-full blur-3xl"></div>
-              <div className="absolute bottom-40 right-32 w-48 h-48 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-full blur-3xl"></div>
+              {/* Enhanced Floating Elements */}
+              <div className="absolute -top-6 -right-6 w-12 h-12 ai-pulse opacity-80 shadow-lg"></div>
+              <div className="absolute -bottom-8 -left-8 w-8 h-8 ai-pulse opacity-60 shadow-md" style={{animationDelay: '1s'}}></div>
+              <div className="absolute top-1/3 -right-10 w-6 h-6 ai-pulse opacity-40" style={{animationDelay: '2s'}}></div>
+              <div className="absolute bottom-1/3 -left-4 w-4 h-4 bg-gradient-to-br from-accent-purple to-primary rounded-full opacity-50 floating-shapes" style={{animationDelay: '3s'}}></div>
             </div>
           </div>
         </div>
