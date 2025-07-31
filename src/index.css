@@ -201,21 +201,37 @@
     @apply bg-white/70 backdrop-blur-md border border-white/20;
   }
 
-  /* Animation Classes */
+  /* Enhanced Animation Classes */
   .animate-fade-in {
-    animation: fadeIn 0.6s ease-out;
+    animation: fadeIn 0.8s ease-out;
   }
   
   .animate-slide-up {
-    animation: slideUp 0.8s ease-out;
+    animation: slideUp 1s ease-out;
   }
   
   .animate-scale-in {
-    animation: scaleIn 0.5s ease-out;
+    animation: scaleIn 0.7s ease-out;
   }
 
   .animate-fade-in-delayed {
-    animation: fadeIn 0.8s ease-out 0.2s both;
+    animation: fadeIn 1s ease-out 0.3s both;
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.8s ease-out;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.8s ease-out;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-bounce-gentle {
+    animation: bounceGentle 4s ease-in-out infinite;
   }
 
   /* Premium Hero Background */
@@ -349,5 +365,36 @@
   }
   100% {
     background-position: 200% 0;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceGentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
   }
 }

@@ -57,23 +57,85 @@ const ProductFeatures = () => {
           </p>
         </div>
 
-        {/* Modern Bento Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature, index) => (
-            <div 
-              key={index}
-              className="feature-card text-center group relative"
-            >
-              <div className="relative z-10">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-accent-purple/20 rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-all duration-500 shadow-lg">
-                  <feature.icon className="w-10 h-10 text-primary" />
-                </div>
-                
-                <h3 className="text-xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors duration-300">{feature.title}</h3>
-                <p className="text-muted-foreground leading-relaxed font-medium">{feature.description}</p>
+        {/* Advanced Bento Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-8 auto-rows-min">
+          
+          {/* Large Feature Card - Spans 2 columns */}
+          <div className="lg:col-span-2 xl:col-span-3 row-span-2 bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-white/20 group hover:shadow-3xl transition-all duration-500 relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="relative z-10">
+              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                <Zap className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-foreground">End-to-end Automation</h3>
+              <p className="text-muted-foreground leading-relaxed mb-6">From interview to feedback, minimal human intervention required for complete hiring workflow.</p>
+              <div className="flex gap-2">
+                <div className="w-12 h-12 bg-blue-100 rounded-full"></div>
+                <div className="w-12 h-12 bg-purple-100 rounded-full"></div>
+                <div className="w-12 h-12 bg-emerald-100 rounded-full"></div>
               </div>
             </div>
-          ))}
+          </div>
+
+          {/* Medium Feature Cards */}
+          <div className="lg:col-span-1 xl:col-span-1 bg-white/90 backdrop-blur-xl rounded-2xl p-6 shadow-xl border border-white/20 group hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
+            <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4 shadow-md">
+              <Users className="w-6 h-6 text-white" />
+            </div>
+            <h3 className="text-lg font-bold mb-3 text-foreground">Advanced AI</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">NLP-driven AI trained on millions of interviews.</p>
+          </div>
+
+          <div className="lg:col-span-1 xl:col-span-1 bg-white/90 backdrop-blur-xl rounded-2xl p-6 shadow-xl border border-white/20 group hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
+            <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center mb-4 shadow-md">
+              <Shield className="w-6 h-6 text-white" />
+            </div>
+            <h3 className="text-lg font-bold mb-3 text-foreground">Enterprise Security</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">GDPR approved with secure storage.</p>
+          </div>
+
+          <div className="lg:col-span-1 xl:col-span-1 bg-white/90 backdrop-blur-xl rounded-2xl p-6 shadow-xl border border-white/20 group hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
+            <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4 shadow-md">
+              <Palette className="w-6 h-6 text-white" />
+            </div>
+            <h3 className="text-lg font-bold mb-3 text-foreground">Full Customization</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">Custom branding and interview flows.</p>
+          </div>
+
+          {/* Wide Feature Card */}
+          <div className="lg:col-span-2 xl:col-span-2 bg-gradient-to-r from-slate-50 to-blue-50 rounded-2xl p-6 shadow-xl border border-white/20 group hover:shadow-2xl transition-all duration-500">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-500 rounded-xl flex items-center justify-center shadow-md">
+                <Share className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-foreground">Seamless Integration</h3>
+                <p className="text-sm text-muted-foreground">Works with major ATS platforms</p>
+              </div>
+            </div>
+            <div className="flex gap-3">
+              <div className="bg-white rounded-lg px-3 py-2 text-xs font-medium text-foreground shadow-sm">Workday</div>
+              <div className="bg-white rounded-lg px-3 py-2 text-xs font-medium text-foreground shadow-sm">BambooHR</div>
+              <div className="bg-white rounded-lg px-3 py-2 text-xs font-medium text-foreground shadow-sm">Greenhouse</div>
+            </div>
+          </div>
+
+          {/* Remaining Features in Compact Cards */}
+          <div className="lg:col-span-1 xl:col-span-1 bg-white/90 backdrop-blur-xl rounded-2xl p-6 shadow-xl border border-white/20 group hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
+            <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-xl flex items-center justify-center mb-4 shadow-md">
+              <Calendar className="w-6 h-6 text-white" />
+            </div>
+            <h3 className="text-lg font-bold mb-3 text-foreground">Infinite Scale</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">Handle 100K+ concurrent interviews.</p>
+          </div>
+
+          <div className="lg:col-span-1 xl:col-span-1 bg-white/90 backdrop-blur-xl rounded-2xl p-6 shadow-xl border border-white/20 group hover:shadow-2xl transition-all duration-500 transform hover:scale-105">
+            <div className="w-12 h-12 bg-gradient-to-br from-rose-500 to-pink-500 rounded-xl flex items-center justify-center mb-4 shadow-md">
+              <Globe className="w-6 h-6 text-white" />
+            </div>
+            <h3 className="text-lg font-bold mb-3 text-foreground">Global Support</h3>
+            <p className="text-sm text-muted-foreground leading-relaxed">120+ languages worldwide.</p>
+          </div>
         </div>
       </div>
     </section>
